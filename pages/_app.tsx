@@ -1,7 +1,9 @@
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
+import 'minireset.css/minireset.css';
+
+function Bardenova({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default Bardenova;
