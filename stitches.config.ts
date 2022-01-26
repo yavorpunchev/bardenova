@@ -15,7 +15,7 @@ const stitches = createStitches({
   theme: {
     colors: {
       accent: '#260590',
-      background: '#E5E5E5',
+      background: '#EFEEE8',
       text: '#030320',
     },
     fonts: {

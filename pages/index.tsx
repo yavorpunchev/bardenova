@@ -1,13 +1,12 @@
 import type { NextPage } from 'next';
 
+import Hero from '../components/Hero';
 import SectionParagraph from '../components/SectionParagraph';
 
 const Home: NextPage = () => {
   return (
     <>
-      <header>
-        <h1>Lilla Bardenova &ndash; designer</h1>
-      </header>
+      <Hero />
       <main>
         <SectionParagraph title="About">
           Multidisciplinary artist &amp; designer specializing in creating
