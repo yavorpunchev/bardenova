@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 
+import SectionParagraph from '../components/SectionParagraph';
+
 const Home: NextPage = () => {
   return (
     <>
@@ -7,35 +9,25 @@ const Home: NextPage = () => {
         <h1>Lilla Bardenova &ndash; designer</h1>
       </header>
       <main>
-        <section>
-          <h2>About</h2>
-          <p>
-            Multidisciplinary artist & designer specializing in creating digital
-            products and experiences with a strong focus on brand and user
-            experience
-          </p>
-        </section>
-        <section>
-          <h2>Currently</h2>
-          <p>Leading design in the telco world @Toku</p>
-        </section>
-        <section>
-          <h2>Previously</h2>
-          <p>
-            Facebook, Uber, Snapchat, Bloomberg, Lightricks, Heineken, Voxbone,
-            Bandwidth, 7/Eleven, Udemy, Deepcrawl
-          </p>
-        </section>
-        <section>
-          <h2>Additional info</h2>
-          <p>
-            <ul>
-              <li>Creative mentor at Skillshare</li>
-              <li>Freelance illustrator</li>
-              <li>Forever remote (feel free to change my mind)</li>
-            </ul>
-          </p>
-        </section>
+        <SectionParagraph title="About">
+          Multidisciplinary artist &amp; designer specializing in creating
+          digital products and experiences with a strong focus on brand and user
+          experience
+        </SectionParagraph>
+        <SectionParagraph title="Currently">
+          Leading design in the telco world <a href="https://toku.co/">@Toku</a>
+        </SectionParagraph>
+        <SectionParagraph title="Previously">
+          Facebook, Uber, Snapchat, Bloomberg, Lightricks, Heineken, Voxbone,
+          Bandwidth, 7/Eleven, Udemy, Deepcrawl
+        </SectionParagraph>
+        <SectionParagraph title="Additional info">
+          <ul>
+            <li>Creative mentor at Skillshare</li>
+            <li>Freelance illustrator</li>
+            <li>Forever remote (feel free to change my mind)</li>
+          </ul>
+        </SectionParagraph>
       </main>
       <footer>
         <h3>Get in touch</h3>
