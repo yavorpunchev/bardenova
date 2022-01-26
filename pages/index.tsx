@@ -1,33 +1,13 @@
 import type { NextPage } from 'next';
 
 import Hero from '../components/Hero';
-import SectionParagraph from '../components/SectionParagraph';
+import Body from '../components/Body';
 
 const Home: NextPage = () => {
   return (
     <>
       <Hero />
-      <main>
-        <SectionParagraph title="About">
-          Multidisciplinary artist &amp; designer specializing in creating
-          digital products and experiences with a strong focus on brand and user
-          experience
-        </SectionParagraph>
-        <SectionParagraph title="Currently">
-          Leading design in the telco world <a href="https://toku.co/">@Toku</a>
-        </SectionParagraph>
-        <SectionParagraph title="Previously">
-          Facebook, Uber, Snapchat, Bloomberg, Lightricks, Heineken, Voxbone,
-          Bandwidth, 7/Eleven, Udemy, Deepcrawl
-        </SectionParagraph>
-        <SectionParagraph title="Additional info">
-          <ul>
-            <li>Creative mentor at Skillshare</li>
-            <li>Freelance illustrator</li>
-            <li>Forever remote (feel free to change my mind)</li>
-          </ul>
-        </SectionParagraph>
-      </main>
+      <Body />
       <footer>
         <h3>Get in touch</h3>
         <section>
