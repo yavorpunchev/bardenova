@@ -1,32 +1,32 @@
+import useMeasure from 'react-use-measure';
 import type { NextPage } from 'next';
+
+import { styled } from '../stitches.config';
 
 import Hero from '../components/Hero';
 import Body from '../components/Body';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
+  const [ref, bounds] = useMeasure();
   return (
-    <>
+    <Container css={{ paddingBottom: bounds?.height }}>
       <Hero />
       <Body />
-      <footer>
-        <h3>Get in touch</h3>
-        <section>
-          <p>
-            Freelance project inquiries always welcome. Work samples and resume
-            available upon request.
-          </p>
-          <p>
-            <a href="mailto:bardenova@gmail.com">bardenova@gmail.com</a>
-            <br />
-            <a href="https://instagram.com/">insta</a> |
-            <a href="https://youtube.com/">youtube</a> |
-            <a href="https://dribbble.com/">dribbble</a> |
-            <a href="https://substack.com/">mailing list</a>
-          </p>
-        </section>
-      </footer>
-    </>
+      <FooterWrapper ref={ref}>
+        <Footer />
+      </FooterWrapper>
+    </Container>
   );
 };
+
+const Container = styled('div', {});
+
+const FooterWrapper = styled('div', {
+  width: '100%',
+  position: 'fixed',
+  bottom: 0,
+  zIndex: '-1',
+});
 
 export default Home;

@@ -30,7 +30,7 @@ export default class Document extends NextDocument {
           <link
             as="font"
             crossOrigin="anonymous"
-            href="/fonts/Leiko-Regular.woff"
+            href="/fonts/Leiko-Regular.woff2"
             rel="preload"
             type="font/woff"
           />

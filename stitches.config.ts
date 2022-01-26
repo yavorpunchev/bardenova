@@ -34,21 +34,13 @@ const stitches = createStitches({
       xxxl: '80px',
     },
     fontSizes: {
-      xxxs: '12px',
-      xxs: '14px',
-      xs: '16px',
-      s: '18px',
-      m: '20px',
-      l: '24px',
-      xl: '28px',
-      xxl: '32px',
-      xxxl: '48px',
-      xxxxl: '64px',
+      heading: 'calc(28px + (200 - 28) * ((100vw - 320px) / (1680 - 320)))',
     },
     fontWeights: {
       regular: 400,
     },
     lineHeights: {
+      bigHeading: 0.95,
       base: 1,
       heading: 1.1,
       body: 1.6,

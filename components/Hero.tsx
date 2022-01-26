@@ -23,12 +23,13 @@ const Header = styled('header', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  background: '$background',
 });
 
 const Heading = styled('h1', {
   fontFamily: '$serif',
-  fontSize: 'calc(28px + (200 - 28) * ((100vw - 320px) / (1680 - 320)))',
-  lineHeight: '0.95',
+  fontSize: '$heading',
+  lineHeight: '$bigHeading',
   textAlign: 'right',
   color: '$accent',
 });

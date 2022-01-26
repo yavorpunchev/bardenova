@@ -16,7 +16,7 @@ export default function Body(): React.ReactElement {
       </SectionParagraph>
       <SectionParagraph title="Previously">
         Facebook, Uber, Snapchat, Bloomberg, Lightricks, Heineken, Voxbone,
-        Bandwidth, 7/Eleven, Udemy, Deepcrawl
+        Bandwidth, 7-Eleven, Udemy, Deepcrawl
       </SectionParagraph>
       <SectionParagraph title="Additional info">
         <ul>
@@ -36,4 +36,6 @@ const Main = styled('main', {
   alignItems: 'flex-end',
   flexDirection: 'column',
   paddingRight: '15vw',
+  paddingBottom: '15vw',
+  background: '$background',
 });
