@@ -26,7 +26,7 @@ const FooterWrapper = styled('div', {
   width: '100%',
   position: 'fixed',
   bottom: 0,
-  zIndex: '-1',
+  zIndex: '1',
 });
 
 export default Home;

@@ -24,6 +24,8 @@ const Header = styled('header', {
   alignItems: 'center',
   justifyContent: 'center',
   background: '$background',
+  position: 'relative',
+  zIndex: 2,
 });
 
 const Heading = styled('h1', {

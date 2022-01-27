@@ -2,6 +2,8 @@ import React from 'react';
 
 import { styled } from '../stitches.config';
 
+import { LightLink } from '../components/Link';
+
 export default function Footer(): React.ReactElement {
   return (
     <Container>
@@ -15,12 +17,14 @@ export default function Footer(): React.ReactElement {
           available upon request.
         </Paragraph>
         <Paragraph>
-          <a href="mailto:bardenova@gmail.com">bardenova@gmail.com</a>
+          <LightLink href="mailto:bardenova@gmail.com">
+            bardenova@gmail.com
+          </LightLink>
           <br />
-          <a href="https://instagram.com/">insta</a> |
-          <a href="https://youtube.com/">youtube</a> |
-          <a href="https://dribbble.com/">dribbble</a> |
-          <a href="https://substack.com/">mailing list</a>
+          <LightLink href="https://instagram.com/">instagram</LightLink> |{' '}
+          <LightLink href="https://youtube.com/">youtube</LightLink> |{' '}
+          <LightLink href="https://dribbble.com/">dribbble</LightLink> |{' '}
+          <LightLink href="https://substack.com/">mailing list</LightLink>
         </Paragraph>
       </Section>
     </Container>
@@ -47,6 +51,7 @@ const Paragraph = styled('p', {
   fontSize: '16px',
   maxWidth: '470px',
   lineHeight: '$body',
+  letterSpacing: '-0.4px',
 });
 
 const Heading = styled('h3', {

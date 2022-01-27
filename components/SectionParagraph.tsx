@@ -22,7 +22,7 @@ export default function SectionParagraph({
 const Section = styled('section', {
   width: '100%',
   maxWidth: '480px',
-  marginBottom: '$l',
+  marginBottom: '$xl',
   '&:last-child': {
     marginBottom: 0,
   },
@@ -41,4 +41,5 @@ const Paragraph = styled('div', {
   fontFamily: '$mono',
   fontSize: '16px',
   lineHeight: '$body',
+  letterSpacing: '-0.4px',
 });

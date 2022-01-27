@@ -2,6 +2,7 @@ import React from 'react';
 
 import { styled } from '../stitches.config';
 import SectionParagraph from './SectionParagraph';
+import Link from './Link';
 
 export default function Body(): React.ReactElement {
   return (
@@ -12,7 +13,8 @@ export default function Body(): React.ReactElement {
         experience
       </SectionParagraph>
       <SectionParagraph title="Currently">
-        Leading design in the telco world <a href="https://toku.co/">@Toku</a>
+        Leading design in the telco world{' '}
+        <Link href="https://toku.co/">@Toku</Link>
       </SectionParagraph>
       <SectionParagraph title="Previously">
         Facebook, Uber, Snapchat, Bloomberg, Lightricks, Heineken, Voxbone,
@@ -21,7 +23,8 @@ export default function Body(): React.ReactElement {
       <SectionParagraph title="Additional info">
         <ul>
           <li>
-            Creative mentor at <a href="https://skillshare.com/">Skillshare</a>
+            Creative mentor at{' '}
+            <Link href="https://skillshare.com/">Skillshare</Link>
           </li>
           <li>Freelance illustrator</li>
           <li>Forever remote &ndash; feel free to change my mind</li>
@@ -38,4 +41,6 @@ const Main = styled('main', {
   paddingRight: '15vw',
   paddingBottom: '15vw',
   background: '$background',
+  position: 'relative',
+  zIndex: 2,
 });
