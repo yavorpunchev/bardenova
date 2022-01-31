@@ -12,6 +12,9 @@ const globalStyles = globalCss({
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
     '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+    '@start': {
+      background: '$background',
+    },
   },
   '::selection': {
     color: '$background',
