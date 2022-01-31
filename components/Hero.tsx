@@ -2,6 +2,7 @@ import React from 'react';
 import { use100vh } from 'react-div-100vh';
 
 import { styled } from '../stitches.config';
+import Arrow from './Arrow';
 import Flower from './Flower';
 
 export default function Hero(): React.ReactElement {
@@ -19,6 +20,7 @@ export default function Hero(): React.ReactElement {
         <br />
         &ndash; designer
       </Heading>
+      {/* <Arrow /> */}
     </Header>
   );
 }
@@ -40,6 +42,7 @@ const Heading = styled('h1', {
   textAlign: 'right',
   color: '$accent',
   marginTop: '-8vw',
+  paddingBottom: '$l',
 });
 
 const FlowerContainer = styled('div', {
@@ -48,5 +51,11 @@ const FlowerContainer = styled('div', {
   marginLeft: '-20vw',
   svg: {
     width: '45vw',
+  },
+  '@start': {
+    marginTop: '-20vw',
+    svg: {
+      width: '60vw',
+    },
   },
 });

@@ -34,7 +34,7 @@ const stitches = createStitches({
       xxxl: '80px',
     },
     fontSizes: {
-      heading: 'calc(28px + (200 - 28) * ((100vw - 320px) / (1680 - 320)))',
+      heading: 'calc(32px + (200 - 32) * ((100vw - 320px) / (1680 - 320)))',
     },
     fontWeights: {
       regular: 400,
@@ -50,7 +50,7 @@ const stitches = createStitches({
     },
   },
   media: {
-    start: `(max-width: ${breakpoints[1]})`,
+    start: `(min-width: 0px) and (max-width: ${breakpoints[1]})`,
     bp1: `(min-width: ${breakpoints[1]}) and (max-width: ${breakpoints[2]})`,
     bp2: `(min-width: ${breakpoints[2]}) and (max-width: ${breakpoints[3]})`,
     bp3: `(min-width: ${breakpoints[4]})`,

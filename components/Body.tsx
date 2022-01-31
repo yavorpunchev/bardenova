@@ -70,9 +70,23 @@ const Main = styled('main', {
 });
 
 const Text = styled('div', {
-  paddingRight: '15vw',
-  paddingTop: '15vw',
-  paddingBottom: '15vw',
+  paddingTop: '12vw',
+  paddingRight: '12vw',
+  paddingBottom: '12vw',
+  '@start': {
+    padding: '$l',
+  },
+  '@bp1': {
+    padding: '$xxl',
+  },
+  '@bp2': {
+    padding: '$xxxl',
+  },
+  '@bp3': {
+    paddingTop: '12vw',
+    paddingRight: '12vw',
+    paddingBottom: '12vw',
+  },
 });
 
 const LineContainer = styled('div', {
@@ -80,5 +94,17 @@ const LineContainer = styled('div', {
   marginBottom: '-5px',
   svg: {
     width: '50vw',
+  },
+  '@start': {
+    display: 'none',
+  },
+  '@bp1': {
+    display: 'none',
+  },
+  '@bp2': {
+    display: 'none',
+  },
+  '@bp3': {
+    display: 'block',
   },
 });

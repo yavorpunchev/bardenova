@@ -45,13 +45,40 @@ const Section = styled('section', {
   marginTop: '5vw',
   display: 'flex',
   justifyContent: 'space-between',
+  '@start': {
+    flexDirection: 'column',
+  },
+  '@bp1': {
+    flexDirection: 'column',
+  },
+  '@bp2': {
+    flexDirection: 'column',
+  },
 });
 
 const Paragraph = styled('p', {
   fontSize: '16px',
-  maxWidth: '470px',
+  maxWidth: '450px',
   lineHeight: '$body',
   letterSpacing: '-0.4px',
+  '@start': {
+    marginBottom: '$l',
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
+  '@bp1': {
+    marginBottom: '$l',
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
+  '@bp2': {
+    marginBottom: '$l',
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
 });
 
 const Heading = styled('h3', {

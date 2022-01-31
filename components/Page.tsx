@@ -1,7 +1,11 @@
 import Head from 'next/head';
+import useMeasure from 'react-use-measure';
 import { useRouter } from 'next/router';
 
 import { BASE_URL } from '../constants';
+import { styled } from '../stitches.config';
+
+import Footer from '../components/Footer';
 
 type PageProps = {
   children: React.ReactNode;
@@ -21,8 +25,17 @@ const Page = ({
   const router = useRouter();
   const path = router.pathname;
   const image = `${url}/images/og.png`;
+
+  const [ref, bounds] = useMeasure();
+  const padding = {
+    paddingBottom: bounds?.height,
+    '@start': {
+      paddingBottom: 0,
+    },
+  };
+
   return (
-    <>
+    <Container css={padding}>
       <Head>
         <title>{title}</title>
         {description && <meta name="description" content={description} />}
@@ -41,8 +54,23 @@ const Page = ({
         )}
       </Head>
       {children}
-    </>
+      <FooterWrapper ref={ref}>
+        <Footer />
+      </FooterWrapper>
+    </Container>
   );
 };
+
+const Container = styled('div');
+
+const FooterWrapper = styled('div', {
+  width: '100%',
+  position: 'fixed',
+  bottom: 0,
+  zIndex: '1',
+  '@start': {
+    position: 'static',
+  },
+});
 
 export default Page;

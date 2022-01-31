@@ -23,6 +23,9 @@ const Section = styled('section', {
   width: '100%',
   maxWidth: '480px',
   marginBottom: '$xl',
+  '@start': {
+    marginBottom: '$l',
+  },
   '&:last-child': {
     marginBottom: 0,
   },
