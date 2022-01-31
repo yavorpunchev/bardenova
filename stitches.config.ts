@@ -34,7 +34,7 @@ const stitches = createStitches({
       xxxl: '80px',
     },
     fontSizes: {
-      heading: 'calc(32px + (200 - 32) * ((100vw - 320px) / (1680 - 320)))',
+      heading: 'calc(56px + (200 - 56) * ((100vw - 320px) / (1680 - 320)))',
     },
     fontWeights: {
       regular: 400,
