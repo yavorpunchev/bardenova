@@ -5,10 +5,10 @@ import { styled } from '../stitches.config';
 import Flower from './Flower';
 
 export default function Hero(): React.ReactElement {
-  const viewportHeight = use100vh();
-  const height = viewportHeight ? viewportHeight : '100vh';
+  // const viewportHeight = use100vh();
+  // const height = viewportHeight ? viewportHeight : '100vh';
   return (
-    <Header css={{ height }}>
+    <Header>
       <FlowerContainer>
         <Flower />
       </FlowerContainer>
@@ -27,6 +27,7 @@ const Header = styled('header', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  flexDirection: 'column',
   background: '$background',
   position: 'relative',
   zIndex: 2,
@@ -38,13 +39,14 @@ const Heading = styled('h1', {
   lineHeight: '$bigHeading',
   textAlign: 'right',
   color: '$accent',
+  marginTop: '-8vw',
 });
 
 const FlowerContainer = styled('div', {
-  position: 'absolute',
-  top: '-32vh',
-  left: '10vw',
+  position: 'relative',
+  marginTop: '-16vw',
+  marginLeft: '-20vw',
   svg: {
-    width: '50vw',
+    width: '45vw',
   },
 });
