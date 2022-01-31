@@ -41,9 +41,8 @@ const Heading = styled('h1', {
 });
 
 const FlowerContainer = styled('div', {
-  // transform: 'rotate(-15deg)',
   position: 'absolute',
-  top: '-40vh',
+  top: '-32vh',
   left: '10vw',
   svg: {
     width: '50vw',

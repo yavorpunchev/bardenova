@@ -21,7 +21,6 @@ const Page = ({
   const router = useRouter();
   const path = router.pathname;
   const image = `${url}/images/og.png`;
-
   return (
     <>
       <Head>

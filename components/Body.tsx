@@ -10,7 +10,7 @@ const CLIENTS = [
   'Snapchat',
   'Bloomberg',
   'Lightricks',
-  'Heineken',
+  'OpenPhone',
   'Voxbone',
   'Bandwidth',
   '7-Eleven',
