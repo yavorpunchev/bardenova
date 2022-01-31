@@ -7,7 +7,7 @@ import { globalCss } from '../stitches.config';
 const globalStyles = globalCss({
   body: {
     color: '$text',
-    background: '$background',
+    background: '$accent',
     fontFamily: '$mono',
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
