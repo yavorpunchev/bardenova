@@ -33,7 +33,7 @@ export default function Body(): React.ReactElement {
           <ul>
             <li>Freelance illustrator</li>
             <li>
-              Creative mentor at{' '}
+              Creative mentor on{' '}
               <Link color="dark" href={SKILLSHARE_URL}>
                 Skillshare
               </Link>
