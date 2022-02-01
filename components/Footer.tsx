@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from 'next-themes';
 
 import { styled } from '../stitches.config';
 import { LightLink } from '../components/Link';
@@ -12,8 +13,11 @@ import {
 } from '../constants';
 
 export default function Footer(): React.ReactElement {
+  const { systemTheme } = useTheme();
+  const FooterContainer =
+    systemTheme === 'dark' ? DarkContainer : LightContainer;
   return (
-    <Container>
+    <FooterContainer>
       <Heading>
         Get in <br />
         touch
@@ -43,17 +47,29 @@ export default function Footer(): React.ReactElement {
           </LightLink>
         </Paragraph>
       </Section>
-    </Container>
+    </FooterContainer>
   );
 }
 
 const Container = styled('footer', {
+  padding: '10vw',
+});
+
+const LightContainer = styled(Container, {
   color: '$background',
   background: '$accent',
-  padding: '10vw',
   '::selection': {
     color: '$accent',
     background: '$background',
+  },
+});
+
+const DarkContainer = styled(Container, {
+  color: '$heading',
+  background: '$accent',
+  '::selection': {
+    color: '$accent',
+    background: '$heading',
   },
 });
 

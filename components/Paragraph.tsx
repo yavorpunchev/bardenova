@@ -32,7 +32,7 @@ const Section = styled('section', {
 });
 
 const Heading = styled('h2', {
-  color: '$accent',
+  color: '$heading',
   fontFamily: '$serif',
   fontSize: '26px',
   lineHeight: '$heading',

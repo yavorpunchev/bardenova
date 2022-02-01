@@ -40,10 +40,10 @@ export default function Body(): React.ReactElement {
         </Paragraph>
         <Paragraph title="Previously">
           {CLIENTS.map((client, index) => (
-            <>
-              <span key={client}>{client}</span>
+            <React.Fragment key={client}>
+              <span>{client}</span>
               {index + 1 !== CLIENTS.length && <>, </>}
-            </>
+            </React.Fragment>
           ))}
         </Paragraph>
         <Paragraph title="Additional info">
@@ -73,7 +73,7 @@ const Main = styled('main', {
   zIndex: 2,
 });
 
-const Text = styled('div', {
+const Text = styled('section', {
   paddingTop: '12vw',
   paddingRight: '12vw',
   paddingBottom: '12vw',
@@ -93,9 +93,9 @@ const Text = styled('div', {
   },
 });
 
-const LineContainer = styled('div', {
-  marginLeft: '-5px',
-  marginBottom: '-5px',
+const LineContainer = styled('section', {
+  marginLeft: '-6px',
+  marginBottom: '-6px',
   svg: {
     width: '50vw',
   },

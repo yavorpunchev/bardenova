@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 
 import 'minireset.css/minireset.css';
 
-import { globalCss } from '../stitches.config';
+import { darkTheme, globalCss } from '../stitches.config';
 
 const globalStyles = globalCss({
   body: {
@@ -24,7 +25,22 @@ const globalStyles = globalCss({
 
 function Bardenova({ Component, pageProps }: AppProps) {
   globalStyles();
-  return <Component {...pageProps} />;
+
+  const theme = {
+    light: 'light-theme',
+    dark: darkTheme.toString(),
+  };
+
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      disableTransitionOnChange
+      value={theme}
+    >
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default Bardenova;

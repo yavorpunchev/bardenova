@@ -1,13 +1,9 @@
 import React from 'react';
-import { use100vh } from 'react-div-100vh';
 
 import { styled } from '../stitches.config';
-import Arrow from './Arrow';
 import Flower from './Flower';
 
 export default function Hero(): React.ReactElement {
-  // const viewportHeight = use100vh();
-  // const height = viewportHeight ? viewportHeight : '100vh';
   return (
     <Header>
       <FlowerContainer>
@@ -20,7 +16,6 @@ export default function Hero(): React.ReactElement {
         <br />
         &ndash; designer
       </Heading>
-      {/* <Arrow /> */}
     </Header>
   );
 }
@@ -36,13 +31,13 @@ const Header = styled('header', {
 });
 
 const Heading = styled('h1', {
+  color: '$heading',
   fontFamily: '$serif',
   fontSize: '$heading',
   lineHeight: '$bigHeading',
-  textAlign: 'right',
-  color: '$accent',
   marginTop: '-8vw',
   paddingBottom: '$l',
+  textAlign: 'right',
 });
 
 const FlowerContainer = styled('div', {

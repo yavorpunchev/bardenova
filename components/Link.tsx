@@ -1,7 +1,7 @@
 import { styled } from '../stitches.config';
 
 const Link = styled('a', {
-  color: '$accent',
+  color: '$heading',
   textDecoration: 'none',
   position: 'relative',
   '&:before': {

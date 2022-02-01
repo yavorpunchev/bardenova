@@ -11,12 +11,17 @@ export const transitions = {
   smooth: [0.23, 1, 0.32, 1],
 };
 
+const colors = {
+  accent: '#260590',
+  background: '#EFEEE8',
+  text: '#030320',
+};
+
 const stitches = createStitches({
   theme: {
     colors: {
-      accent: '#260590',
-      background: '#EFEEE8',
-      text: '#030320',
+      ...colors,
+      heading: colors.accent,
     },
     fonts: {
       serif: '"Leiko", Cambria, Georgia, serif',
@@ -71,3 +76,12 @@ export const {
   styled,
   theme,
 } = stitches;
+
+export const darkTheme = createTheme('dark-theme', {
+  colors: {
+    accent: colors.accent,
+    background: colors.text,
+    heading: colors.background,
+    text: '#A8A7AC', // 70% colors.background on colors.text
+  },
+});
