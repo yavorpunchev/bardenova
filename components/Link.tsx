@@ -1,4 +1,5 @@
 import { styled } from '../stitches.config';
+import { darkTheme } from '../stitches.config';
 
 const BaseLink = styled('a', {
   textDecoration: 'none',
@@ -38,6 +39,15 @@ const BaseLink = styled('a', {
           '&:hover': {
             color: '$background',
             opacity: 0.8,
+          },
+        },
+        [`.${darkTheme} &`]: {
+          color: '$heading',
+          '@hover': {
+            '&:hover': {
+              color: '$heading',
+              opacity: 0.8,
+            },
           },
         },
       },
