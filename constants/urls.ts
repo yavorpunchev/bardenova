@@ -1,6 +1,9 @@
 export const BASE_URL = 'http://localhost:3000';
 export const CDN_BASE_URL = 'https://bardenova.b-cdn.net';
 
+export const TOKU_URL = 'https://toku.co/';
+export const SKILLSHARE_URL = 'https://skillshare.com/';
+
 export const CONTACT_URL = 'mailto:bardenova@gmail.com';
 export const INSTAGRAM_URL = 'https://www.instagram.com/bardenova/';
 export const YOUTUBE_URL =

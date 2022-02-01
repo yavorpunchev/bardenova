@@ -37,7 +37,7 @@ const Heading = styled('h2', {
   marginBottom: '$xs',
 });
 
-const Text = styled('p', {
+const Text = styled('div', {
   color: '$text',
   fontFamily: '$mono',
   fontSize: '16px',

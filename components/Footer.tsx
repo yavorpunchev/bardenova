@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 
 import { styled } from '../stitches.config';
-import { LightLink } from './Link';
+import Link from './Link';
 // import Line from './Line';
 
 import {
@@ -32,26 +32,29 @@ export default function Footer(): React.ReactElement {
           available upon request.
         </Paragraph>
         <Paragraph>
-          <LightLink href={CONTACT_URL}>Say hi!</LightLink> |{' '}
-          <LightLink href={SUBSTACK_URL} target="_blank">
+          <Link color="light" href={CONTACT_URL} target="_self">
+            Say hi!
+          </Link>{' '}
+          |{' '}
+          <Link color="light" href={SUBSTACK_URL}>
             Newsletter
-          </LightLink>
+          </Link>
           <br />
-          <LightLink href={DRIBBBLE_URL} target="_blank">
+          <Link color="light" href={DRIBBBLE_URL}>
             Dribbble
-          </LightLink>{' '}
+          </Link>{' '}
           |{' '}
-          <LightLink href={TWITTER_URL} target="_blank">
+          <Link color="light" href={TWITTER_URL}>
             Twitter
-          </LightLink>{' '}
+          </Link>{' '}
           |{' '}
-          <LightLink href={INSTAGRAM_URL} target="_blank">
+          <Link color="light" href={INSTAGRAM_URL}>
             Instagram
-          </LightLink>{' '}
+          </Link>{' '}
           |{' '}
-          <LightLink href={YOUTUBE_URL} target="_blank">
+          <Link color="light" href={YOUTUBE_URL}>
             YouTube
-          </LightLink>
+          </Link>
         </Paragraph>
       </Section>
     </FooterContainer>

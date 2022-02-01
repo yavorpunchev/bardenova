@@ -4,7 +4,7 @@ import Link from './Link';
 import Paragraph from './Paragraph';
 
 import { styled } from '../stitches.config';
-import { CLIENTS, DESCRIPTION } from '../constants';
+import { CLIENTS, DESCRIPTION, TOKU_URL, SKILLSHARE_URL } from '../constants';
 
 export default function Body(): React.ReactElement {
   return (
@@ -16,7 +16,7 @@ export default function Body(): React.ReactElement {
         <Paragraph title="About">{DESCRIPTION}</Paragraph>
         <Paragraph title="Currently">
           Leading design in the telco world at{' '}
-          <Link href="https://toku.co/" target="_blank">
+          <Link color="dark" href={TOKU_URL}>
             Toku
           </Link>
           .
@@ -34,7 +34,7 @@ export default function Body(): React.ReactElement {
             <li>Freelance illustrator</li>
             <li>
               Creative mentor at{' '}
-              <Link href="https://skillshare.com/" target="_blank">
+              <Link color="dark" href={SKILLSHARE_URL}>
                 Skillshare
               </Link>
             </li>
