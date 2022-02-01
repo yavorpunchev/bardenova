@@ -2,10 +2,10 @@ import Head from 'next/head';
 import useMeasure from 'react-use-measure';
 import { useRouter } from 'next/router';
 
-import { BASE_URL } from '../constants';
+import { BASE_URL, TWITTER_HANDLE } from '../constants';
 import { styled } from '../stitches.config';
 
-import Footer from '../components/Footer';
+import Footer from './Footer';
 
 type PageProps = {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ const Page = ({
   children,
   description,
   title,
-  twitter = 'bardenova',
+  twitter = TWITTER_HANDLE,
   url = BASE_URL,
 }: PageProps) => {
   const router = useRouter();
@@ -63,7 +63,7 @@ const Page = ({
 
 const Container = styled('div');
 
-const FooterWrapper = styled('div', {
+const FooterWrapper = styled('footer', {
   width: '100%',
   position: 'fixed',
   bottom: 0,

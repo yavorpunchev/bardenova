@@ -14,7 +14,7 @@ export default function Hero(): React.ReactElement {
         <br />
         Bardenova
         <br />
-        &ndash; designer
+        &mdash; designer
       </Heading>
     </Header>
   );

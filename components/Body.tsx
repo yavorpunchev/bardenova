@@ -1,24 +1,11 @@
 import React from 'react';
 
-import { styled } from '../stitches.config';
 import Line from './Line';
 import Link from './Link';
 import Paragraph from './Paragraph';
 
-const CLIENTS = [
-  'Facebook',
-  'Uber',
-  'Snapchat',
-  'Bloomberg',
-  'GoDaddy',
-  'OpenPhone',
-  'Voxbone',
-  'Bandwidth',
-  '7-Eleven',
-  'Udemy',
-  'Deepcrawl',
-  'Lightricks',
-];
+import { styled } from '../stitches.config';
+import { CLIENTS, DESCRIPTION } from '../constants';
 
 export default function Body(): React.ReactElement {
   return (
@@ -27,10 +14,7 @@ export default function Body(): React.ReactElement {
         <Line />
       </LineContainer>
       <Text>
-        <Paragraph title="About">
-          Multidisciplinary artist and designer specializing in creating
-          exceptional digital product experiences with a strong focus on brand.
-        </Paragraph>
+        <Paragraph title="About">{DESCRIPTION}</Paragraph>
         <Paragraph title="Currently">
           Leading design in the telco world at{' '}
           <Link href="https://toku.co/" target="_blank">

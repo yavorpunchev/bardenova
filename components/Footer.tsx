@@ -2,7 +2,8 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 
 import { styled } from '../stitches.config';
-import { LightLink } from '../components/Link';
+import { LightLink } from './Link';
+// import Line from './Line';
 
 import {
   CONTACT_URL,
@@ -10,6 +11,7 @@ import {
   YOUTUBE_URL,
   DRIBBBLE_URL,
   SUBSTACK_URL,
+  TWITTER_URL,
 } from '../constants';
 
 export default function Footer(): React.ReactElement {
@@ -18,6 +20,9 @@ export default function Footer(): React.ReactElement {
     systemTheme === 'dark' ? DarkContainer : LightContainer;
   return (
     <FooterContainer>
+      {/* <LineContainer>
+        <Line />
+      </LineContainer> */}
       <Heading>
         Get in <br />
         touch
@@ -28,7 +33,10 @@ export default function Footer(): React.ReactElement {
           available upon request.
         </Paragraph>
         <Paragraph>
-          <LightLink href={CONTACT_URL}>Say hi!</LightLink>
+          <LightLink href={CONTACT_URL}>Say hi!</LightLink> |{' '}
+          <LightLink href={SUBSTACK_URL} target="_blank">
+            Newsletter
+          </LightLink>
           <br />
           <LightLink href={INSTAGRAM_URL} target="_blank">
             Instagram
@@ -42,8 +50,8 @@ export default function Footer(): React.ReactElement {
             Dribbble
           </LightLink>{' '}
           |{' '}
-          <LightLink href={SUBSTACK_URL} target="_blank">
-            Newsletter
+          <LightLink href={TWITTER_URL} target="_blank">
+            Twitter
           </LightLink>
         </Paragraph>
       </Section>
@@ -51,8 +59,9 @@ export default function Footer(): React.ReactElement {
   );
 }
 
-const Container = styled('footer', {
+const Container = styled('div', {
   padding: '10vw',
+  position: 'relative',
 });
 
 const LightContainer = styled(Container, {
@@ -72,6 +81,28 @@ const DarkContainer = styled(Container, {
     background: '$heading',
   },
 });
+
+// const LineContainer = styled('div', {
+//   position: 'absolute',
+//   top: '-6px',
+//   right: '-10vw',
+//   transform: 'rotate(180deg)',
+//   svg: {
+//     width: '50vw',
+//   },
+//   '@start': {
+//     display: 'none',
+//   },
+//   '@bp1': {
+//     display: 'none',
+//   },
+//   '@bp2': {
+//     display: 'none',
+//   },
+//   '@bp3': {
+//     display: 'block',
+//   },
+// });
 
 const Section = styled('section', {
   marginTop: '5vw',
