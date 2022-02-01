@@ -1,8 +1,15 @@
 import React from 'react';
 
 import { styled } from '../stitches.config';
-
 import { LightLink } from '../components/Link';
+
+import {
+  CONTACT_URL,
+  INSTAGRAM_URL,
+  YOUTUBE_URL,
+  DRIBBBLE_URL,
+  SUBSTACK_URL,
+} from '../constants';
 
 export default function Footer(): React.ReactElement {
   return (
@@ -17,14 +24,23 @@ export default function Footer(): React.ReactElement {
           available upon request.
         </Paragraph>
         <Paragraph>
-          <LightLink href="mailto:bardenova@gmail.com">
-            bardenova@gmail.com
-          </LightLink>
+          <LightLink href={CONTACT_URL}>Say hi!</LightLink>
           <br />
-          <LightLink href="https://instagram.com/">instagram</LightLink> |{' '}
-          <LightLink href="https://youtube.com/">youtube</LightLink> |{' '}
-          <LightLink href="https://dribbble.com/">dribbble</LightLink> |{' '}
-          <LightLink href="https://substack.com/">mailing list</LightLink>
+          <LightLink href={INSTAGRAM_URL} target="_blank">
+            Instagram
+          </LightLink>{' '}
+          |{' '}
+          <LightLink href={YOUTUBE_URL} target="_blank">
+            YouTube
+          </LightLink>{' '}
+          |{' '}
+          <LightLink href={DRIBBBLE_URL} target="_blank">
+            Dribbble
+          </LightLink>{' '}
+          |{' '}
+          <LightLink href={SUBSTACK_URL} target="_blank">
+            Newsletter
+          </LightLink>
         </Paragraph>
       </Section>
     </Container>

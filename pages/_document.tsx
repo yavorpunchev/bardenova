@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
-import { CDN_URL } from '../constants';
+import { CDN_BASE_URL } from '../constants';
 import { getCssText } from '../stitches.config';
 
 const fonts = `
@@ -8,13 +8,13 @@ const fonts = `
   font-family: 'Leiko';
   font-weight: 400;
   font-display: swap;
-  src: url(${CDN_URL}/fonts/Leiko-Regular.woff2) format('woff2');
+  src: url(${CDN_BASE_URL}/fonts/Leiko-Regular.woff2) format('woff2');
 }
 @font-face {
   font-family: 'GT America Mono';
   font-weight: 400;
   font-display: swap;
-  src: url(${CDN_URL}/fonts/GT-America-Mono-Regular.woff2) format('woff2');
+  src: url(${CDN_BASE_URL}/fonts/GT-America-Mono-Regular.woff2) format('woff2');
 }
 `;
 
@@ -32,14 +32,14 @@ export default class Document extends NextDocument {
           <link
             as="font"
             crossOrigin="anonymous"
-            href={`${CDN_URL}/fonts/Leiko-Regular.woff2`}
+            href={`${CDN_BASE_URL}/fonts/Leiko-Regular.woff2`}
             rel="preload"
             type="font/woff"
           />
           <link
             as="font"
             crossOrigin="anonymous"
-            href={`${CDN_URL}/fonts/GT-America-Mono-Regular.woff2`}
+            href={`${CDN_BASE_URL}/fonts/GT-America-Mono-Regular.woff2`}
             rel="preload"
             type="font/woff2"
           />

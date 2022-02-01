@@ -1,22 +1,23 @@
 import React from 'react';
 
 import { styled } from '../stitches.config';
-import SectionParagraph from './SectionParagraph';
-import Link from './Link';
 import Line from './Line';
+import Link from './Link';
+import Paragraph from './Paragraph';
 
 const CLIENTS = [
   'Facebook',
   'Uber',
   'Snapchat',
   'Bloomberg',
-  'Lightricks',
+  'GoDaddy',
   'OpenPhone',
   'Voxbone',
   'Bandwidth',
   '7-Eleven',
   'Udemy',
   'Deepcrawl',
+  'Lightricks',
 ];
 
 export default function Body(): React.ReactElement {
@@ -26,34 +27,37 @@ export default function Body(): React.ReactElement {
         <Line />
       </LineContainer>
       <Text>
-        <SectionParagraph title="About">
+        <Paragraph title="About">
           Multidisciplinary artist and designer specializing in creating
           exceptional digital product experiences with a strong focus on brand.
-        </SectionParagraph>
-        <SectionParagraph title="Currently">
-          Leading design in the telco world{' '}
-          <Link href="https://toku.co/">@Toku</Link>.
-        </SectionParagraph>
-        <SectionParagraph title="Previously">
+        </Paragraph>
+        <Paragraph title="Currently">
+          Leading design in the telco world at{' '}
+          <Link href="https://toku.co/" target="_blank">
+            Toku
+          </Link>
+          .
+        </Paragraph>
+        <Paragraph title="Previously">
           {CLIENTS.map((client, index) => (
             <>
-              <Link key={client} href="#">
-                {client}
-              </Link>
+              <span key={client}>{client}</span>
               {index + 1 !== CLIENTS.length && <>, </>}
             </>
           ))}
-        </SectionParagraph>
-        <SectionParagraph title="Additional info">
+        </Paragraph>
+        <Paragraph title="Additional info">
           <ul>
             <li>Freelance illustrator</li>
             <li>
               Creative mentor at{' '}
-              <Link href="https://skillshare.com/">Skillshare</Link>
+              <Link href="https://skillshare.com/" target="_blank">
+                Skillshare
+              </Link>
             </li>
             <li>Forever remote &ndash; feel free to change my mind</li>
           </ul>
-        </SectionParagraph>
+        </Paragraph>
       </Text>
     </Main>
   );
