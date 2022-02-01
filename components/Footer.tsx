@@ -2,7 +2,6 @@ import { useTheme } from 'next-themes';
 
 import { styled } from '../stitches.config';
 import Link from './Link';
-// import Line from './Line';
 
 import {
   CONTACT_URL,
@@ -19,9 +18,6 @@ export default function Footer(): React.ReactElement {
     systemTheme === 'dark' ? DarkContainer : LightContainer;
   return (
     <FooterContainer>
-      {/* <LineContainer>
-        <Line />
-      </LineContainer> */}
       <Heading>
         Get in <br />
         touch
@@ -89,28 +85,6 @@ const DarkContainer = styled(Container, {
     background: '$heading',
   },
 });
-
-// const LineContainer = styled('div', {
-//   position: 'absolute',
-//   top: '-6px',
-//   right: '-10vw',
-//   transform: 'rotate(180deg)',
-//   svg: {
-//     width: '50vw',
-//   },
-//   '@start': {
-//     display: 'none',
-//   },
-//   '@bp1': {
-//     display: 'none',
-//   },
-//   '@bp2': {
-//     display: 'none',
-//   },
-//   '@bp3': {
-//     display: 'block',
-//   },
-// });
 
 const Section = styled('section', {
   marginTop: '5vw',
