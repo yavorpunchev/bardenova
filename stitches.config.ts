@@ -25,7 +25,7 @@ const stitches = createStitches({
     },
     fonts: {
       serif: '"Leiko", Cambria, Georgia, serif',
-      mono: '"GT America Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+      mono: '"GT America Mono", "SF Mono", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace',
     },
     space: {
       xxxs: '2px',
@@ -83,5 +83,23 @@ export const darkTheme = createTheme('dark-theme', {
     background: colors.text,
     heading: colors.background,
     text: '#A8A7AC', // 70% colors.background on colors.text
+  },
+});
+
+export const globalStyles = globalCss({
+  body: {
+    color: '$text',
+    background: '$accent',
+    fontFamily: '$mono',
+    '-moz-osx-font-smoothing': 'grayscale',
+    '-webkit-font-smoothing': 'antialiased',
+    '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+    '@start': {
+      background: '$background',
+    },
+  },
+  '::selection': {
+    color: '$background',
+    background: '$accent',
   },
 });

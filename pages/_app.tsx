@@ -3,25 +3,7 @@ import { ThemeProvider } from 'next-themes';
 
 import 'minireset.css/minireset.css';
 
-import { darkTheme, globalCss } from '../stitches.config';
-
-const globalStyles = globalCss({
-  body: {
-    color: '$text',
-    background: '$accent',
-    fontFamily: '$mono',
-    '-moz-osx-font-smoothing': 'grayscale',
-    '-webkit-font-smoothing': 'antialiased',
-    '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
-    '@start': {
-      background: '$background',
-    },
-  },
-  '::selection': {
-    color: '$background',
-    background: '$accent',
-  },
-});
+import { darkTheme, globalStyles } from '../stitches.config';
 
 function Bardenova({ Component, pageProps }: AppProps) {
   globalStyles();

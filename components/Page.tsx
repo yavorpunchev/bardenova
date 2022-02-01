@@ -15,13 +15,13 @@ type PageProps = {
   url?: string;
 };
 
-const Page = ({
+export default function Page({
   children,
   description,
   title,
   twitter = TWITTER_HANDLE,
   url = BASE_URL,
-}: PageProps) => {
+}: PageProps): React.ReactElement {
   const router = useRouter();
   const path = router.pathname;
   const image = `${url}/images/og.png`;
@@ -59,7 +59,7 @@ const Page = ({
       </FooterWrapper>
     </Container>
   );
-};
+}
 
 const Container = styled('div');
 
@@ -72,5 +72,3 @@ const FooterWrapper = styled('footer', {
     position: 'static',
   },
 });
-
-export default Page;

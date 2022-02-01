@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTheme } from 'next-themes';
 
 import { styled } from '../stitches.config';
@@ -38,20 +37,20 @@ export default function Footer(): React.ReactElement {
             Newsletter
           </LightLink>
           <br />
-          <LightLink href={INSTAGRAM_URL} target="_blank">
-            Instagram
-          </LightLink>{' '}
-          |{' '}
-          <LightLink href={YOUTUBE_URL} target="_blank">
-            YouTube
-          </LightLink>{' '}
-          |{' '}
           <LightLink href={DRIBBBLE_URL} target="_blank">
             Dribbble
           </LightLink>{' '}
           |{' '}
           <LightLink href={TWITTER_URL} target="_blank">
             Twitter
+          </LightLink>{' '}
+          |{' '}
+          <LightLink href={INSTAGRAM_URL} target="_blank">
+            Instagram
+          </LightLink>{' '}
+          |{' '}
+          <LightLink href={YOUTUBE_URL} target="_blank">
+            YouTube
           </LightLink>
         </Paragraph>
       </Section>

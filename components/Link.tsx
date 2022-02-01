@@ -1,7 +1,6 @@
 import { styled } from '../stitches.config';
 
-const Link = styled('a', {
-  color: '$heading',
+const BaseLink = styled('a', {
   textDecoration: 'none',
   position: 'relative',
   '&:before': {
@@ -22,7 +21,6 @@ const Link = styled('a', {
   },
   '@hover': {
     '&:hover': {
-      color: '$text',
       '&:before': {
         transformOrigin: '100% 50%',
         transform: 'scale3d(0, 1, 1)',
@@ -31,7 +29,16 @@ const Link = styled('a', {
   },
 });
 
-const LightLink = styled(Link, {
+const Link = styled(BaseLink, {
+  color: '$heading',
+  '@hover': {
+    '&:hover': {
+      color: '$text',
+    },
+  },
+});
+
+const LightLink = styled(BaseLink, {
   color: '$background',
   '@hover': {
     '&:hover': {

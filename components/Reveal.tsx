@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-
 import { styled, transitions } from '../stitches.config';
 
 const transition = {

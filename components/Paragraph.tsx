@@ -1,20 +1,18 @@
-import React from 'react';
-
 import { styled } from '../stitches.config';
 
-type SectionParagraphProps = {
+type ParagraphProps = {
   title: string;
   children: React.ReactNode;
 };
 
-export default function SectionParagraph({
+export default function Paragraph({
   title,
   children,
-}: SectionParagraphProps): React.ReactElement {
+}: ParagraphProps): React.ReactElement {
   return (
     <Section>
       <Heading>{title}</Heading>
-      <Paragraph>{children}</Paragraph>
+      <Text>{children}</Text>
     </Section>
   );
 }
@@ -39,7 +37,7 @@ const Heading = styled('h2', {
   marginBottom: '$xs',
 });
 
-const Paragraph = styled('div', {
+const Text = styled('p', {
   color: '$text',
   fontFamily: '$mono',
   fontSize: '16px',

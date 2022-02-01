@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Line from './Line';
 import Link from './Link';
 import Paragraph from './Paragraph';
