@@ -24,7 +24,7 @@ export default function Page({
 }: PageProps): React.ReactElement {
   const router = useRouter();
   const path = router.pathname;
-  const image = `${url}/images/og.png`;
+  const image = `${url}/og.png`;
 
   const [ref, bounds] = useMeasure();
   const padding = {
