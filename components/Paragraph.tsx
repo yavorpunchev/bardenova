@@ -22,7 +22,7 @@ const Section = styled('section', {
   maxWidth: '480px',
   marginBottom: '$xl',
   '@start': {
-    marginBottom: '$l',
+    marginBottom: '$xl',
   },
   '&:last-child': {
     marginBottom: 0,

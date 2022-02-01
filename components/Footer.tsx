@@ -64,6 +64,12 @@ export default function Footer(): React.ReactElement {
 const Container = styled('div', {
   padding: '10vw',
   position: 'relative',
+  '@start': {
+    padding: '$xl',
+  },
+  '@bp2': {
+    flexDirection: '10vw',
+  },
 });
 
 const LightContainer = styled(Container, {
@@ -127,19 +133,19 @@ const Paragraph = styled('p', {
   lineHeight: '$body',
   letterSpacing: '-0.4px',
   '@start': {
-    marginBottom: '$l',
+    marginBottom: '$xl',
     '&:last-child': {
       marginBottom: 0,
     },
   },
   '@bp1': {
-    marginBottom: '$l',
+    marginBottom: '$xl',
     '&:last-child': {
       marginBottom: 0,
     },
   },
   '@bp2': {
-    marginBottom: '$l',
+    marginBottom: '$xl',
     '&:last-child': {
       marginBottom: 0,
     },
@@ -150,4 +156,16 @@ const Heading = styled('h3', {
   fontFamily: '$serif',
   fontSize: '$heading',
   lineHeight: '$bigHeading',
+});
+
+const Br = styled('br', {
+  '@start': {
+    display: 'none',
+  },
+  '@bp1': {
+    display: 'none',
+  },
+  '@bp2': {
+    display: 'block',
+  },
 });

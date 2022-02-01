@@ -61,7 +61,7 @@ const Text = styled('section', {
   paddingRight: '12vw',
   paddingBottom: '12vw',
   '@start': {
-    padding: '$l',
+    padding: '$xl',
   },
   '@bp1': {
     padding: '$xxl',

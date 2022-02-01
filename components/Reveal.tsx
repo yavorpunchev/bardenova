@@ -22,8 +22,11 @@ const Container = styled(motion.div, {
   position: 'fixed',
   top: 0,
   left: 0,
+  zIndex: 2,
   width: '100%',
   height: '100%',
   background: '$accent',
-  zIndex: 2,
+  '@start': {
+    display: 'none',
+  },
 });
