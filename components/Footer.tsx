@@ -6,11 +6,11 @@ import { LightLink } from './Link';
 
 import {
   CONTACT_URL,
-  INSTAGRAM_URL,
-  YOUTUBE_URL,
   DRIBBBLE_URL,
+  INSTAGRAM_URL,
   SUBSTACK_URL,
   TWITTER_URL,
+  YOUTUBE_URL,
 } from '../constants';
 
 export default function Footer(): React.ReactElement {
