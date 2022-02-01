@@ -22,6 +22,14 @@ const BaseLink = styled('a', {
     transition: 'color, opacity, transform 300ms',
   },
 
+  '&:focus': {
+    outlineStyle: 'dashed',
+    outlineColor: 'currentColor',
+    outlineWidth: '1px',
+    outlineOffset: '6px',
+    borderRadius: '1px',
+  },
+
   '@hover': {
     '&:hover': {
       '&:before': {
