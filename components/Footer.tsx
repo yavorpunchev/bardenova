@@ -23,29 +23,41 @@ export default function Footer(): React.ReactElement {
           available upon request.
         </Paragraph>
         <Paragraph>
-          <Link color="light" href={CONTACT_URL} target="_self">
-            Say hi!
-          </Link>{' '}
-          |{' '}
-          <Link color="light" href={SUBSTACK_URL}>
-            Newsletter
-          </Link>
-          <br />
-          <Link color="light" href={DRIBBBLE_URL}>
-            Dribbble
-          </Link>{' '}
-          |{' '}
-          <Link color="light" href={TWITTER_URL}>
-            Twitter
-          </Link>{' '}
-          |{' '}
-          <Link color="light" href={INSTAGRAM_URL}>
-            Instagram
-          </Link>{' '}
-          |{' '}
-          <Link color="light" href={YOUTUBE_URL}>
-            YouTube
-          </Link>
+          <LinkWrapper>
+            <Link color="light" href={CONTACT_URL} target="_self">
+              Say hi
+            </Link>
+            <Span> | </Span>
+          </LinkWrapper>
+          <LinkWrapper>
+            <Link color="light" href={SUBSTACK_URL}>
+              Newsletter
+            </Link>
+          </LinkWrapper>
+          <Br />
+          <LinkWrapper>
+            <Link color="light" href={DRIBBBLE_URL}>
+              Dribbble
+            </Link>
+            <Span> | </Span>
+          </LinkWrapper>
+          <LinkWrapper>
+            <Link color="light" href={TWITTER_URL}>
+              Twitter
+            </Link>
+            <Span> | </Span>
+          </LinkWrapper>
+          <LinkWrapper>
+            <Link color="light" href={INSTAGRAM_URL}>
+              Instagram
+            </Link>
+            <Span> | </Span>
+          </LinkWrapper>
+          <LinkWrapper>
+            <Link color="light" href={YOUTUBE_URL}>
+              YouTube
+            </Link>
+          </LinkWrapper>
         </Paragraph>
       </Section>
     </Container>
@@ -101,7 +113,7 @@ const Paragraph = styled('p', {
   lineHeight: '$body',
   letterSpacing: '-0.4px',
   '@start': {
-    marginBottom: '$xl',
+    marginBottom: '$l',
     '&:last-child': {
       marginBottom: 0,
     },
@@ -135,5 +147,31 @@ const Br = styled('br', {
   },
   '@bp2': {
     display: 'block',
+  },
+});
+
+const Span = styled('span', {
+  '@start': {
+    display: 'none',
+  },
+  '@bp1': {
+    display: 'none',
+  },
+  '@bp2': {
+    display: 'inline',
+  },
+});
+
+const LinkWrapper = styled('span', {
+  '@start': {
+    display: 'inline-block',
+    marginRight: '$s',
+  },
+  '@bp1': {
+    display: 'inline-block',
+    marginRight: '$s',
+  },
+  '@bp2': {
+    display: 'inline',
   },
 });
