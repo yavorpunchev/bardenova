@@ -23,10 +23,9 @@ export default function Page({
   url = BASE_URL,
 }: PageProps): React.ReactElement {
   const router = useRouter();
-  const path = router.pathname;
-  const image = `${url}/og.png`;
-
+  const image = `${url}/social.png`;
   const [ref, bounds] = useMeasure();
+
   const padding = {
     paddingBottom: bounds?.height,
     '@start': {
@@ -38,10 +37,10 @@ export default function Page({
     <Container css={padding}>
       <Head>
         <title>{title}</title>
-        {description && <meta name="description" content={description} />}
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width" />
 
-        <meta property="og:url" content={`${url}${path}`} />
+        <meta property="og:url" content={`${url}${router.pathname}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />

@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://bardenova.com';
 export const CDN_BASE_URL = 'https://bardenova.b-cdn.net';
 
 export const TOKU_URL = 'https://toku.co/';
