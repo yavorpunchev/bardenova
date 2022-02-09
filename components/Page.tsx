@@ -41,16 +41,13 @@ export default function Page({
         <meta name="viewport" content="width=device-width" />
 
         <meta property="og:url" content={`${url}${router.pathname}`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
 
-        {twitter && (
-          <>
-            <meta name="twitter:site" content={`@${twitter}`} />
-            <meta name="twitter:card" content="summary_large_image" />
-          </>
-        )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={`@${twitter}`} />
       </Head>
       {children}
       <FooterWrapper ref={ref}>
