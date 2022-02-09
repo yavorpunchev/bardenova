@@ -15,6 +15,7 @@ export const CLIENTS = [
   'Lightricks',
 ];
 
+export const TITLE = 'Lilla Bardenova';
 export const DESCRIPTION =
   'Multidisciplinary artist and designer specializing in creating exceptional digital product experiences with a strong focus on brand.';
 
