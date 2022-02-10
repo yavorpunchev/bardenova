@@ -4,7 +4,6 @@ import Body from '../components/Body';
 import Hero from '../components/Hero';
 import Page from '../components/Page';
 import Reveal from '../components/Reveal';
-
 import { TITLE, DESCRIPTION } from '../constants';
 
 const Home: NextPage = () => {
