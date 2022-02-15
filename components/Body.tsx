@@ -4,7 +4,7 @@ import Link from './Link';
 import Paragraph from './Paragraph';
 
 import { styled } from '../stitches.config';
-import { CLIENTS, DESCRIPTION, TOKU_URL, SKILLSHARE_URL } from '../constants';
+import { CLIENTS, DESCRIPTION, SKILLSHARE_URL } from '../constants';
 
 export default function Body(): React.ReactElement {
   return (
@@ -15,11 +15,7 @@ export default function Body(): React.ReactElement {
       <Text>
         <Paragraph title="About">{DESCRIPTION}</Paragraph>
         <Paragraph title="Currently">
-          Leading design in the telco world at{' '}
-          <Link color="dark" href={TOKU_URL}>
-            Toku
-          </Link>
-          .
+          Leading design in the telco world. Drawing stickers left and right
         </Paragraph>
         <Paragraph title="Previously">
           {CLIENTS.map((client, index) => (

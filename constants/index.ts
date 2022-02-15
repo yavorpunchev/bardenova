@@ -17,6 +17,7 @@ export const CLIENTS = [
 
 export const TITLE = 'Lilla Bardenova';
 export const DESCRIPTION =
-  'Multidisciplinary artist and designer specializing in creating exceptional digital product experiences with a strong focus on brand.';
+  'Multidisciplinary artist and designer specializing in creating exceptional digital product experiences with a strong focus on brand';
 
 export * from './urls';
+export * from './projects';
