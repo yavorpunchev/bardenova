@@ -165,13 +165,16 @@ const Button = styled('button', {
   transition: '$smooth',
 
   '&:hover': {
+    color: '$accent',
     transform: 'scale3d(1.12, 1.12, 1.12)',
   },
   '&:active': {
+    color: '$text',
     transform: 'scale3d(1, 1, 1)',
   },
 
   svg: {
+    fill: 'currentColor',
     display: 'block',
     width: '16vw',
     height: '16vw',
