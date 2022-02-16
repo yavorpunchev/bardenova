@@ -10,45 +10,64 @@ export default function ProjectsGrid(): React.ReactElement {
   return (
     <Main>
       <Grid>
-        {PROJECTS.map(project => (
-          <Item key={project.path}>
-            {project.flower ? (
-              <FlowerWrapper>
-                <Flower />
-              </FlowerWrapper>
-            ) : (
-              <>
-                <Image
-                  width={400}
-                  height={400}
-                  alt="placeholder"
-                  layout="responsive"
-                  src={project.path}
-                />
-                <Text>
-                  Client: {project.client}
-                  <br />
-                  Focus: {project.focus}
-                </Text>
-              </>
-            )}
-          </Item>
-        ))}
+        {PROJECTS.map(project =>
+          project.flower ? (
+            <FlowerWrapper key={project.id}>
+              <Flower />
+            </FlowerWrapper>
+          ) : (
+            <Item key={project.id}>
+              <Image
+                width={400}
+                height={400}
+                alt="placeholder"
+                layout="responsive"
+                src={project.path}
+              />
+              <Text>
+                Client: {project.client}
+                <br />
+                Focus: {project.focus}
+              </Text>
+            </Item>
+          )
+        )}
       </Grid>
     </Main>
   );
 }
 
 const Main = styled('main', {
-  paddingTop: '$xxxl',
-  paddingBottom: '$xxxl',
   background: '$background',
   position: 'relative',
   zIndex: 2,
+
+  paddingTop: '$xxxl',
+  paddingBottom: '$xxxl',
+
+  paddingLeft: '$xl',
+  paddingRight: '$xl',
+
+  '@start': {
+    paddingTop: '$xl',
+    paddingBottom: '$xl',
+  },
+  '@bp1': {
+    paddingTop: '$xl',
+    paddingBottom: '$xl',
+  },
+  '@bp2': {
+    paddingTop: '$xl',
+    paddingBottom: '$xl',
+  },
+  '@bp3': {
+    paddingTop: '$xxxl',
+    paddingBottom: '$xxxl',
+  },
 });
 
 const Grid = styled('div', {
-  maxWidth: 1296,
+  maxWidth: 1680,
   width: '100%',
   marginLeft: 'auto',
   marginRight: 'auto',
@@ -57,13 +76,18 @@ const Grid = styled('div', {
   gridGap: '$xl',
   gridTemplateColumns: '1fr 1fr 1fr',
 
-  gridRow: 'row-2-start / row-end',
-  gridColumn: 'col-2-start / col-end',
-
-  gridRowStart: 'row-2-start',
-  gridRowEnd: 'row-end',
-  gridColumnStart: 'col-2-start',
-  gridColumnEnd: 'col-end',
+  '@start': {
+    gridTemplateColumns: '1fr',
+  },
+  '@bp1': {
+    gridTemplateColumns: '1fr',
+  },
+  '@bp2': {
+    gridTemplateColumns: '1fr 1fr',
+  },
+  '@bp3': {
+    gridTemplateColumns: '1fr 1fr 1fr',
+  },
 });
 
 const Item = styled('div', {
@@ -80,6 +104,18 @@ const Text = styled('p', {
 });
 
 const FlowerWrapper = styled('div', {
+  '@start': {
+    display: 'none',
+  },
+  '@bp1': {
+    display: 'none',
+  },
+  '@bp2': {
+    display: 'none',
+  },
+  '@bp3': {
+    display: 'block',
+  },
   svg: {
     width: '140%',
     color: '$accent',

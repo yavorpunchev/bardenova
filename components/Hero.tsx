@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
-import { config, styled, transitions } from '../stitches.config';
-import { useMedia } from '../utils/hooks';
 import Flower from './Flower';
+import Conceal from './Conceal';
+import CheckMyWork from './CheckMyWork';
+
+import { useMedia } from '../utils/hooks';
+import { config, styled, transitions } from '../stitches.config';
 
 const transition = {
   ease: transitions.smooth,
@@ -20,7 +25,9 @@ const slideInTransition = (delay?: number, shouldAnimate?: boolean) => ({
 });
 
 export default function Hero(): React.ReactElement {
+  const [isNavigating, setIsNavigating] = useState(false);
   const { start, bp1, bp2, bp3 } = config.media;
+  const router = useRouter();
 
   const animateOnDesktop = useMedia(
     [start, bp1, bp2, bp3],
@@ -28,38 +35,54 @@ export default function Hero(): React.ReactElement {
     true
   );
 
+  const onClick = () => {
+    setIsNavigating(true);
+    setTimeout(() => {
+      router.push('/projects', undefined, { shallow: true });
+    }, 750);
+  };
+
   return (
-    <Header>
-      <FlowerContainer>
-        <Flower />
-      </FlowerContainer>
-      <Heading>
-        <TextRevealWrapper>
-          <TextReveal
-            key="reveal-first"
-            {...slideInTransition(0.95, animateOnDesktop)}
-          >
-            Lilla
-          </TextReveal>
-        </TextRevealWrapper>
-        <TextRevealWrapper>
-          <TextReveal
-            key="reveal-second"
-            {...slideInTransition(1.06, animateOnDesktop)}
-          >
-            Bardenova
-          </TextReveal>
-        </TextRevealWrapper>
-        <TextRevealWrapper>
-          <TextReveal
-            key="reveal-third"
-            {...slideInTransition(1.17, animateOnDesktop)}
-          >
-            &mdash; designer
-          </TextReveal>
-        </TextRevealWrapper>
-      </Heading>
-    </Header>
+    <>
+      <Header>
+        <SvgWrapper>
+          <div />
+          <FlowerContainer>
+            <Flower />
+          </FlowerContainer>
+          <Button onClick={onClick} type="button">
+            <CheckMyWork />
+          </Button>
+        </SvgWrapper>
+        <Heading>
+          <TextRevealWrapper>
+            <TextReveal
+              key="reveal-first"
+              {...slideInTransition(0.95, animateOnDesktop)}
+            >
+              Lilla
+            </TextReveal>
+          </TextRevealWrapper>
+          <TextRevealWrapper>
+            <TextReveal
+              key="reveal-second"
+              {...slideInTransition(1.06, animateOnDesktop)}
+            >
+              Bardenova
+            </TextReveal>
+          </TextRevealWrapper>
+          <TextRevealWrapper>
+            <TextReveal
+              key="reveal-third"
+              {...slideInTransition(1.17, animateOnDesktop)}
+            >
+              &mdash; designer
+            </TextReveal>
+          </TextRevealWrapper>
+        </Heading>
+      </Header>
+      {isNavigating && <Conceal />}
+    </>
   );
 }
 
@@ -73,12 +96,32 @@ const Header = styled('header', {
   zIndex: 2,
 });
 
+const SvgWrapper = styled('div', {
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+});
+
 const Heading = styled('h1', {
   color: '$heading',
   fontFamily: '$serif',
   fontSize: '$heading',
   marginTop: '-8vw',
   textAlign: 'right',
+
+  '@start': {
+    marginTop: '$m',
+  },
+  '@bp1': {
+    marginTop: '-4vw',
+  },
+  '@bp2': {
+    marginTop: '-6vw',
+  },
+  '@bp3': {
+    marginTop: '-8vw',
+  },
 });
 
 const FlowerContainer = styled('div', {
@@ -106,4 +149,48 @@ const TextRevealWrapper = styled('span', {
 
 const TextReveal = styled(motion.span, {
   display: 'block',
+});
+
+const Button = styled('button', {
+  display: 'block',
+  cursor: 'pointer',
+
+  padding: 0,
+  border: 'none',
+  outline: 'none',
+  background: 'none',
+
+  marginRight: '-16px',
+  marginTop: '-16px',
+
+  svg: {
+    display: 'block',
+  },
+
+  '@start': {
+    marginRight: '-24px',
+    marginTop: '-24px',
+
+    svg: {
+      width: 128,
+      height: 128,
+    },
+  },
+  '@bp1': {
+    marginRight: '-24px',
+    marginTop: '-24px',
+
+    svg: {
+      width: 128,
+      height: 128,
+    },
+  },
+  '@bp2': {
+    marginRight: '-16px',
+    marginTop: '-16px',
+  },
+  '@bp3': {
+    marginRight: '-16px',
+    marginTop: '-16px',
+  },
 });
