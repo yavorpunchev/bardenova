@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
+import { MotionConfig } from 'framer-motion';
 
 import 'minireset.css/minireset.css';
 
@@ -14,14 +15,16 @@ function Bardenova({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      disableTransitionOnChange
-      value={theme}
-    >
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <MotionConfig reducedMotion="user">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        disableTransitionOnChange
+        value={theme}
+      >
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </MotionConfig>
   );
 }
 
