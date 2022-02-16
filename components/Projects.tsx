@@ -17,13 +17,18 @@ export default function ProjectsGrid(): React.ReactElement {
             </FlowerWrapper>
           ) : (
             <Item key={project.id}>
-              <Image
-                width={400}
-                height={400}
-                alt="placeholder"
-                layout="responsive"
-                src={project.path}
-              />
+              {project.type === 'image' && (
+                <Image
+                  width={400}
+                  height={400}
+                  alt="placeholder"
+                  layout="responsive"
+                  src={project.path}
+                />
+              )}
+              {project.type === 'video' && (
+                <Video src={project.path} loop autoPlay playsInline />
+              )}
               <Text>
                 Client: {project.client}
                 <br />
@@ -101,6 +106,12 @@ const Text = styled('p', {
   lineHeight: '$body',
   letterSpacing: '-0.4px',
   marginTop: '$s',
+});
+
+const Video = styled('video', {
+  width: '100%',
+  height: 'auto',
+  display: 'block',
 });
 
 const FlowerWrapper = styled('div', {
