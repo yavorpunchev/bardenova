@@ -27,7 +27,13 @@ export default function ProjectsGrid(): React.ReactElement {
                 />
               )}
               {project.type === 'video' && (
-                <Video src={project.path} loop autoPlay playsInline />
+                <Video
+                  autoPlay
+                  loop
+                  playsInline
+                  poster={project.poster}
+                  src={project.path}
+                />
               )}
               <Text>
                 Client: {project.client}

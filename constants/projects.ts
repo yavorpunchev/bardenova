@@ -5,6 +5,7 @@ export const PROJECTS = [
     focus:
       'Creative direction, illustration language, concept development, illustration',
     path: '/projects/1-7eleven-LillaBardenova.mp4',
+    poster: '/projects/1-7eleven-LillaBardenova.jpg',
     type: 'video',
   },
   {
@@ -31,6 +32,7 @@ export const PROJECTS = [
     client: 'Voxbone',
     focus: 'Branding, web design, campaign creation',
     path: '/projects/4-Voxbone-LillaBardenova.mp4',
+    poster: '/projects/4-Voxbone-LillaBardenova.jpg',
     type: 'video',
   },
   {
@@ -45,6 +47,7 @@ export const PROJECTS = [
     client: 'Facebook',
     focus: 'Creative direction, character development, illustration, animation',
     path: '/projects/6-Facebook-LillaBardenova.mp4',
+    poster: '/projects/6-Facebook-LillaBardenova.jpg',
     type: 'video',
   },
   {
@@ -59,6 +62,7 @@ export const PROJECTS = [
     client: 'Bandwidth',
     focus: 'Brand consistency, web design, product marketing support',
     path: '/projects/8-Bandwidth-LillaBardenova.mp4',
+    poster: '/projects/8-Bandwidth-LillaBardenova.jpg',
     type: 'video',
   },
   {
@@ -66,6 +70,7 @@ export const PROJECTS = [
     client: 'Certainly',
     focus: 'Creative direction, character development, illustration',
     path: '/projects/9-Certainly-LillaBardenova.mp4',
+    poster: '/projects/9-Certainly-LillaBardenova.jpg',
     type: 'video',
   },
   {
@@ -73,6 +78,7 @@ export const PROJECTS = [
     client: 'GoDaddy',
     focus: 'Concept development, character creation, illustration, animation',
     path: '/projects/10-GoDaddy-LillaBardenova.mp4',
+    poster: '/projects/10-GoDaddy-LillaBardenova.jpg',
     type: 'video',
   },
 ];
