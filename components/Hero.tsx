@@ -165,6 +165,8 @@ const Button = styled('button', {
 
   svg: {
     display: 'block',
+    width: '16vw',
+    height: '16vw',
   },
 
   '@start': {
@@ -172,8 +174,8 @@ const Button = styled('button', {
     marginTop: '-24px',
 
     svg: {
-      width: 128,
-      height: 128,
+      width: '38vw',
+      height: '38vw',
     },
   },
   '@bp1': {
@@ -181,16 +183,26 @@ const Button = styled('button', {
     marginTop: '-24px',
 
     svg: {
-      width: 128,
-      height: 128,
+      width: '32vw',
+      height: '32vw',
     },
   },
   '@bp2': {
     marginRight: '-16px',
     marginTop: '-16px',
+
+    svg: {
+      width: '24vw',
+      height: '24vw',
+    },
   },
   '@bp3': {
     marginRight: '-16px',
     marginTop: '-16px',
+
+    svg: {
+      width: '16vw',
+      height: '16vw',
+    },
   },
 });
