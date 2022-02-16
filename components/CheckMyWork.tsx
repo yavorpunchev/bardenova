@@ -1,4 +1,4 @@
-import Svg from './Svg';
+import { styled, keyframes } from '../stitches.config';
 
 export default function CheckMyWork(): React.ReactElement {
   return (
@@ -11,3 +11,13 @@ export default function CheckMyWork(): React.ReactElement {
     </Svg>
   );
 }
+
+const rotate = keyframes({
+  from: { transform: 'rotate(0deg)' },
+  to: { transform: 'rotate(360deg)' },
+});
+
+const Svg = styled('svg', {
+  animation: `${rotate} 20s linear infinite`,
+  display: 'block',
+});

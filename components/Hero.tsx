@@ -162,6 +162,14 @@ const Button = styled('button', {
 
   marginRight: '-16px',
   marginTop: '-16px',
+  transition: '$smooth',
+
+  '&:hover': {
+    transform: 'scale3d(1.12, 1.12, 1.12)',
+  },
+  '&:active': {
+    transform: 'scale3d(1, 1, 1)',
+  },
 
   svg: {
     display: 'block',
