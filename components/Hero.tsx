@@ -154,6 +154,7 @@ const TextReveal = styled(motion.span, {
 });
 
 const Button = styled('button', {
+  color: '$text',
   display: 'block',
   cursor: 'pointer',
 
