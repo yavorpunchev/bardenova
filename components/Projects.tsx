@@ -17,24 +17,29 @@ export default function ProjectsGrid(): React.ReactElement {
             </FlowerWrapper>
           ) : (
             <Item key={project.id}>
-              {project.type === 'image' && (
-                <Image
-                  width={400}
-                  height={400}
-                  alt="placeholder"
-                  layout="responsive"
-                  src={project.path}
-                />
-              )}
-              {project.type === 'video' && (
-                <Video
-                  autoPlay
-                  loop
-                  playsInline
-                  poster={project.poster}
-                  src={project.path}
-                />
-              )}
+              <AspectRatio>
+                <Placeholder />
+                <Relative>
+                  {project.type === 'image' && (
+                    <Image
+                      width={400}
+                      height={400}
+                      alt="placeholder"
+                      layout="responsive"
+                      src={project.path}
+                    />
+                  )}
+                  {project.type === 'video' && (
+                    <Video
+                      autoPlay
+                      loop
+                      playsInline
+                      poster={project.poster}
+                      src={project.path}
+                    />
+                  )}
+                </Relative>
+              </AspectRatio>
               <Text>
                 Client: {project.client}
                 <br />
@@ -103,6 +108,39 @@ const Grid = styled('div', {
 
 const Item = styled('div', {
   width: '100%',
+});
+
+const AspectRatio = styled('div', {
+  width: '100%',
+  position: 'relative',
+  '&::before': {
+    content: '""',
+    width: '1px',
+    marginLeft: '-1px',
+    float: 'left',
+    height: 0,
+    paddingTop: '100%',
+  },
+  '&::after': {
+    content: '""',
+    display: 'table',
+    clear: 'both',
+  },
+});
+
+const Placeholder = styled('div', {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  background: '$text',
+  opacity: 0.05,
+});
+
+const Relative = styled('div', {
+  width: '100%',
+  position: 'relative',
 });
 
 const Text = styled('p', {
