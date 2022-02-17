@@ -87,6 +87,8 @@ export default function Hero(): React.ReactElement {
 }
 
 const Header = styled('header', {
+  width: '100%',
+  overflow: 'hidden',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -164,15 +166,6 @@ const Button = styled('button', {
   marginTop: '-16px',
   transition: '$smooth',
 
-  '&:hover': {
-    color: '$accent',
-    transform: 'scale3d(1.12, 1.12, 1.12)',
-  },
-  '&:active': {
-    color: '$text',
-    transform: 'scale3d(1, 1, 1)',
-  },
-
   svg: {
     fill: 'currentColor',
     display: 'block',
@@ -180,6 +173,16 @@ const Button = styled('button', {
     height: '16vw',
   },
 
+  '@hover': {
+    '&:hover': {
+      color: '$accent',
+      transform: 'scale3d(1.12, 1.12, 1.12)',
+    },
+    '&:active': {
+      color: '$text',
+      transform: 'scale3d(1, 1, 1)',
+    },
+  },
   '@start': {
     marginRight: '-24px',
     marginTop: '-24px',
