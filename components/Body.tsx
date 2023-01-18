@@ -15,7 +15,7 @@ export default function Body(): React.ReactElement {
       <Text>
         <Paragraph title="About">{DESCRIPTION}</Paragraph>
         <Paragraph title="Currently">
-          Leading design in the telco world. Drawing stickers left and right
+          Design @ Shopify. Drawing things left and right
         </Paragraph>
         <Paragraph title="Previously">
           {CLIENTS.map((client, index) => (
