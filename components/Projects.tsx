@@ -36,6 +36,7 @@ export default function ProjectsGrid(): React.ReactElement {
                       playsInline
                       poster={project.poster}
                       src={project.path}
+                      muted
                     />
                   )}
                 </Relative>

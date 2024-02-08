@@ -1,6 +1,23 @@
 export const PROJECTS = [
   {
     id: 0,
+    client: 'Shopify',
+    focus:
+      'Creative direction, art direction, strategy, web and campaign design',
+    path: '/projects/0-1-ShopifyCredit-LillaBardenova.mp4',
+    poster: '/projects/0-1-ShopifyCredit-LillaBardenova.png',
+    type: 'video',
+  },
+  {
+    id: 1,
+    client: 'Shopfiy',
+    focus: 'Creative direction, strategy, production lead',
+    path: '/projects/0-2-ShopifyLending-LillaBardenova.mp4',
+    poster: '/projects/0-2-ShopifyLending-LillaBardenova.png',
+    type: 'video',
+  },
+  {
+    id: 2,
     client: '7-Eleven Norway',
     focus:
       'Creative direction, illustration language, concept development, illustration',
@@ -9,26 +26,26 @@ export const PROJECTS = [
     type: 'video',
   },
   {
-    id: 1,
-    client: 'Uber',
-    focus: 'Branding, campaign creation, product marketing support',
-    path: '/projects/2-Uber-LillaBardenova.png',
-    type: 'image',
-  },
-  {
-    id: 2,
-    client: 'Snapchat',
-    focus: 'Creative direction, concept development, lettering, illustration',
-    path: '/projects/3-Snapchat-LillaBardenova.gif',
-    type: 'image',
-  },
-  {
     id: 3,
     flower: true,
     path: '',
   },
   {
     id: 4,
+    client: 'Uber',
+    focus: 'Branding, campaign creation, product marketing support',
+    path: '/projects/2-Uber-LillaBardenova.png',
+    type: 'image',
+  },
+  {
+    id: 5,
+    client: 'Snapchat',
+    focus: 'Creative direction, concept development, lettering, illustration',
+    path: '/projects/3-Snapchat-LillaBardenova.gif',
+    type: 'image',
+  },
+  {
+    id: 6,
     client: 'Voxbone',
     focus: 'Branding, web design, campaign creation',
     path: '/projects/4-Voxbone-LillaBardenova.mp4',
@@ -36,14 +53,14 @@ export const PROJECTS = [
     type: 'video',
   },
   {
-    id: 5,
+    id: 7,
     client: 'Udemy',
     focus: 'Creative direction, character development, illustration',
     path: '/projects/5-Udemy-LillaBardenova.png',
     type: 'image',
   },
   {
-    id: 6,
+    id: 8,
     client: 'Facebook',
     focus: 'Creative direction, character development, illustration, animation',
     path: '/projects/6-Facebook-LillaBardenova.mp4',
@@ -51,14 +68,14 @@ export const PROJECTS = [
     type: 'video',
   },
   {
-    id: 7,
+    id: 9,
     client: 'Deepcrawl',
     focus: 'Campaign creation, product marketing support',
     path: '/projects/7-Deepcrawl-LillaBardenova.png',
     type: 'image',
   },
   {
-    id: 8,
+    id: 10,
     client: 'Bandwidth',
     focus: 'Brand consistency, web design, product marketing support',
     path: '/projects/8-Bandwidth-LillaBardenova.mp4',
@@ -66,7 +83,7 @@ export const PROJECTS = [
     type: 'video',
   },
   {
-    id: 9,
+    id: 11,
     client: 'Certainly',
     focus: 'Creative direction, character development, illustration',
     path: '/projects/9-Certainly-LillaBardenova.mp4',
@@ -74,7 +91,7 @@ export const PROJECTS = [
     type: 'video',
   },
   {
-    id: 10,
+    id: 12,
     client: 'GoDaddy',
     focus: 'Concept development, character creation, illustration, animation',
     path: '/projects/10-GoDaddy-LillaBardenova.mp4',
