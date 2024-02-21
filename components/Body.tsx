@@ -6,14 +6,19 @@ import Paragraph from './Paragraph';
 import { styled } from '../stitches.config';
 import { CLIENTS, DESCRIPTION, SKILLSHARE_URL } from '../constants';
 
-export default function Body(): React.ReactElement {
+type BodyProps = {
+  navigateToProjects: () => void;
+};
+
+export default function Body(props: BodyProps): React.ReactElement {
+  const { navigateToProjects } = props;
   return (
     <Main>
       <LineContainer>
         <Line />
       </LineContainer>
       <Text>
-        <Paragraph title="About">{DESCRIPTION}</Paragraph>
+        <Paragraph title="About">{DESCRIPTION}.</Paragraph>
         <Paragraph title="Currently">
           Crafting financial services @ Shopify. Drawing things sometimes
         </Paragraph>
@@ -27,6 +32,12 @@ export default function Body(): React.ReactElement {
         </Paragraph>
         <Paragraph title="Additional info">
           <ul>
+            <li>
+              Check{' '}
+              <Link color="dark" onClick={navigateToProjects}>
+                my work
+              </Link>
+            </li>
             <li>Freelance illustrator</li>
             <li>
               Creative mentor on{' '}

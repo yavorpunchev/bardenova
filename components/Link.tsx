@@ -2,8 +2,9 @@ import { styled } from '../stitches.config';
 import { darkTheme } from '../stitches.config';
 
 const BaseLink = styled('a', {
-  textDecoration: 'none',
+  cursor: 'pointer',
   position: 'relative',
+  textDecoration: 'none',
 
   '&:before': {
     width: '100%',

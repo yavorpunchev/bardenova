@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
 
 import Flower from './Flower';
-import Conceal from './Conceal';
 import CheckMyWork from './CheckMyWork';
 
 import { useMedia } from '../utils/hooks';
@@ -24,10 +21,13 @@ const slideInTransition = (delay?: number, shouldAnimate?: boolean) => ({
   },
 });
 
-export default function Hero(): React.ReactElement {
-  const [isNavigating, setIsNavigating] = useState(false);
+type HeroProps = {
+  navigateToProjects: () => void;
+};
+
+export default function Hero(props: HeroProps): React.ReactElement {
+  const { navigateToProjects } = props;
   const { start, bp1, bp2, bp3 } = config.media;
-  const router = useRouter();
 
   const animateOnDesktop = useMedia(
     [start, bp1, bp2, bp3],
@@ -35,54 +35,44 @@ export default function Hero(): React.ReactElement {
     true
   );
 
-  const onClick = () => {
-    setIsNavigating(true);
-    setTimeout(() => {
-      router.push('/projects', undefined, { shallow: true });
-    }, 750);
-  };
-
   return (
-    <>
-      <Header>
-        <SvgWrapper>
-          <div />
-          <FlowerContainer>
-            <Flower />
-          </FlowerContainer>
-          <Button onClick={onClick} type="button">
-            <CheckMyWork />
-          </Button>
-        </SvgWrapper>
-        <Heading>
-          <TextRevealWrapper>
-            <TextReveal
-              key="reveal-first"
-              {...slideInTransition(0.95, animateOnDesktop)}
-            >
-              Lilla
-            </TextReveal>
-          </TextRevealWrapper>
-          <TextRevealWrapper>
-            <TextReveal
-              key="reveal-second"
-              {...slideInTransition(1.06, animateOnDesktop)}
-            >
-              Bardenova
-            </TextReveal>
-          </TextRevealWrapper>
-          <TextRevealWrapper>
-            <TextReveal
-              key="reveal-third"
-              {...slideInTransition(1.17, animateOnDesktop)}
-            >
-              &mdash; designer
-            </TextReveal>
-          </TextRevealWrapper>
-        </Heading>
-      </Header>
-      {isNavigating && <Conceal />}
-    </>
+    <Header>
+      <SvgWrapper>
+        <div />
+        <FlowerContainer>
+          <Flower />
+        </FlowerContainer>
+        <Button onClick={navigateToProjects} type="button">
+          <CheckMyWork />
+        </Button>
+      </SvgWrapper>
+      <Heading>
+        <TextRevealWrapper>
+          <TextReveal
+            key="reveal-first"
+            {...slideInTransition(0.95, animateOnDesktop)}
+          >
+            Lilla
+          </TextReveal>
+        </TextRevealWrapper>
+        <TextRevealWrapper>
+          <TextReveal
+            key="reveal-second"
+            {...slideInTransition(1.06, animateOnDesktop)}
+          >
+            Bardenova
+          </TextReveal>
+        </TextRevealWrapper>
+        <TextRevealWrapper>
+          <TextReveal
+            key="reveal-third"
+            {...slideInTransition(1.17, animateOnDesktop)}
+          >
+            &mdash; designer
+          </TextReveal>
+        </TextRevealWrapper>
+      </Heading>
+    </Header>
   );
 }
 
